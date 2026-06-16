@@ -48,5 +48,12 @@ public class Pez extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Pez ( " + tipoAgua + tamanoAcuario + "m) "; 
     }
+
+    public void SetTamanoAcuario(int tamanoAcuario){
+        if(tamanoAcuario <= 0){
+            throw new IllegalArgumentException("El tamaño del acuario debe ser mayor que cero");
+        }
+        this.tamanoAcuario = tamanoAcuario;
+    }
     
 }
