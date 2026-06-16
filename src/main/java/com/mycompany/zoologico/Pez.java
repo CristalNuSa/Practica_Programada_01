@@ -25,6 +25,11 @@ public class Pez extends Animal {
     }
 
     public void setTipoAgua(int tipoAgua) {
+
+        if (tipoAgua < 0) {
+        throw new IllegalArgumentException("Tipo de agua inválido");
+        }
+
         this.tipoAgua = tipoAgua;
     }
 
@@ -32,7 +37,10 @@ public class Pez extends Animal {
         return tamanoAcuario;
     }
 
-    public void setTamanoAcuario(int tamanoAcuario) {
+    public void SetTamanoAcuario(int tamanoAcuario){
+        if(tamanoAcuario <= 0){
+            throw new IllegalArgumentException("El tamaño del acuario debe ser mayor que cero");
+        }
         this.tamanoAcuario = tamanoAcuario;
     }   
 
@@ -48,20 +56,5 @@ public class Pez extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Pez ( " + tipoAgua + tamanoAcuario + "m) "; 
     }
-    public void setTipoAgua(int tipoAgua) {
-
-    if (tipoAgua < 0) {
-        throw new IllegalArgumentException("Tipo de agua inválido");
-    }
-
-    this.tipoAgua = tipoAgua;
-}
-
-    public void SetTamanoAcuario(int tamanoAcuario){
-        if(tamanoAcuario <= 0){
-            throw new IllegalArgumentException("El tamaño del acuario debe ser mayor que cero");
-        }
-        this.tamanoAcuario = tamanoAcuario;
-    }
-    
+       
 }
