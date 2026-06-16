@@ -107,7 +107,7 @@ public abstract class Animal {
     
     public String descripcion(){
         // peso como es de tipo double puede dar error al imprimirlo por que la %d es para int
-        return String.format("%s %s %s %d %d %s", identificador, nombre, especie, edad, peso, zona);
+        return String.format("%s %s %s %d %.2f %s", identificador, nombre, especie, edad, peso, zona);
     }
     
     public final void imprimirDescripcion(){
