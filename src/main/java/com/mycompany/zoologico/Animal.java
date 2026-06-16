@@ -18,14 +18,12 @@ public abstract class Animal {
     private String zona;
 
     public Animal(String identificador, String nombre, String especie, int edad, double peso, String zona) {
-
-    setIdentificador(identificador);
-    setNombre(nombre);
-    this.especie = especie;
-    setEdad(edad);
-    setPeso(peso);
-    setZona(zona);
-
+        this.identificador = identificador;
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.peso = peso;
+        this.zona = zona;
     }
 
     public String getIdentificador() {
@@ -33,11 +31,6 @@ public abstract class Animal {
     }
 
     public void setIdentificador(String identificador) {
-
-        if (identificador == null) {
-            throw new IllegalArgumentException("El identificador del animal no puede estar vacío");
-        }
-
         this.identificador = identificador;
     }
 
@@ -46,11 +39,6 @@ public abstract class Animal {
     }
 
     public void setNombre(String nombre) {
-
-        if (nombre == null) {
-            throw new IllegalArgumentException("El nombre no puede estar vacío");
-        }
-
         this.nombre = nombre;
     }
 
@@ -67,11 +55,6 @@ public abstract class Animal {
     }
 
     public void setEdad(int edad) {
-
-        if (edad < 0) {
-            throw new IllegalArgumentException("La edad no puede ser negativa");
-        }
-
         this.edad = edad;
     }
 
@@ -80,11 +63,6 @@ public abstract class Animal {
     }
 
     public void setPeso(double peso) {
-
-        if (peso <= 0) {
-            throw new IllegalArgumentException("El peso debe ser mayor que cero");
-        }
-
         this.peso = peso;
     }
 
@@ -93,11 +71,6 @@ public abstract class Animal {
     }
 
     public void setZona(String zona) {
-
-        if (zona == null) {
-            throw new IllegalArgumentException("La zona no puede estar vacía");
-        }
-
         this.zona = zona;
     }
     
@@ -107,11 +80,13 @@ public abstract class Animal {
     
     public String descripcion(){
         // peso como es de tipo double puede dar error al imprimirlo por que la %d es para int
-        return String.format("%s %s %s %d %.2f %s", identificador, nombre, especie, edad, peso, zona);
+        return String.format("%s %s %s %d %d %s", identificador, nombre, especie, edad, peso, zona);
     }
     
     public final void imprimirDescripcion(){
         System.out.println("[Animal]: " + descripcion());
         
-    }         
+    }
+    
+    
 }

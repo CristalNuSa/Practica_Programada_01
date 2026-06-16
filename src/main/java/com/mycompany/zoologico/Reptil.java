@@ -25,11 +25,6 @@ public class Reptil extends Animal {
     }
 
     public void setTipoHabitat(String tipoHabitat) {
-
-        if (tipoHabitat == null) {
-           throw new IllegalArgumentException("El hábitat no puede estar vacío");
-        }
-
         this.tipoHabitat = tipoHabitat;
     }
 
@@ -38,12 +33,7 @@ public class Reptil extends Animal {
     }
 
     public void setTemperaturaRequerida(int temperaturaRequerida) {
-
-    if (temperaturaRequerida < 0) {
-        throw new IllegalArgumentException("La temperatura no puede ser negativa");
-    }
-
-    this.temperaturaRequerida = temperaturaRequerida;
+        this.temperaturaRequerida = temperaturaRequerida;
     }
 
     @Override
@@ -58,4 +48,5 @@ public class Reptil extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Reptil ( " + tipoHabitat + temperaturaRequerida + "°) "; 
     }  
+    
 }
