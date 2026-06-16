@@ -48,6 +48,14 @@ public class Pez extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Pez ( " + tipoAgua + tamanoAcuario + "m) "; 
     }
+    public void setTipoAgua(int tipoAgua) {
+
+    if (tipoAgua < 0) {
+        throw new IllegalArgumentException("Tipo de agua inválido");
+    }
+
+    this.tipoAgua = tipoAgua;
+}
 
     public void SetTamanoAcuario(int tamanoAcuario){
         if(tamanoAcuario <= 0){
