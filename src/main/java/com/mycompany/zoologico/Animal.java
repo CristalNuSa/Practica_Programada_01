@@ -87,6 +87,44 @@ public abstract class Animal {
         System.out.println("[Animal]: " + descripcion());
         
     }
-    
-    
+    public void setIdentificador(String identificador) {
+
+        if (identificador == null) {
+            throw new IllegalArgumentException("El identificador del animal no puede estar vacío");
+        }
+
+        this.identificador = identificador;
+    }
+    public void setNombre(String nombre) {
+
+        if (nombre == null) {
+            throw new IllegalArgumentException("El nombre no puede estar vacío");
+        }
+
+        this.nombre = nombre;
+    }
+    public void setEdad(int edad) {
+
+        if (edad < 0) {
+            throw new IllegalArgumentException("La edad no puede ser negativa");
+        }
+
+        this.edad = edad;
+    }
+    public void setPeso(double peso) {
+
+        if (peso <= 0) {
+            throw new IllegalArgumentException("El peso debe ser mayor que cero");
+        }
+
+        this.peso = peso;
+    }
+    public void setZona(String zona) {
+
+        if (zona == null) {
+            throw new IllegalArgumentException("La zona no puede estar vacía");
+        }
+
+        this.zona = zona;
+    }
 }
