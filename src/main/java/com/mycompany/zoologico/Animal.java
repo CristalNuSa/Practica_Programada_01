@@ -19,12 +19,12 @@ public abstract class Animal {
 
     public Animal(String identificador, String nombre, String especie, int edad, double peso, String zona) {
 
-    setIdentificador(identificador);
-    setNombre(nombre);
+    this.identificador = identificador;
+    this.nombre = nombre;
     this.especie = especie;
-    setEdad(edad);
-    setPeso(peso);
-    setZona(zona);
+    this.edad = edad;
+    this.peso = peso;
+    this.zona = zona;
 
     }
 
@@ -35,10 +35,10 @@ public abstract class Animal {
     public void setIdentificador(String identificador) {
 
         if (identificador == null) {
-            throw new IllegalArgumentException("El identificador del animal no puede estar vacío");
+            System.out.println("El identificador del animal no puede estar vacío");
+        } else {
+            this.identificador = identificador;
         }
-
-        this.identificador = identificador;
     }
 
     public String getNombre() {
@@ -48,10 +48,10 @@ public abstract class Animal {
     public void setNombre(String nombre) {
 
         if (nombre == null) {
-            throw new IllegalArgumentException("El nombre no puede estar vacío");
+            System.out.println("El nombre no puede estar vacío");
+        } else {
+            this.nombre = nombre;
         }
-
-        this.nombre = nombre;
     }
 
     public String getEspecie() {
@@ -69,10 +69,10 @@ public abstract class Animal {
     public void setEdad(int edad) {
 
         if (edad < 0) {
-            throw new IllegalArgumentException("La edad no puede ser negativa");
+            System.out.println("La edad no puede ser negativa");
+        } else {
+            this.edad = edad;
         }
-
-        this.edad = edad;
     }
 
     public double getPeso() {
@@ -82,10 +82,10 @@ public abstract class Animal {
     public void setPeso(double peso) {
 
         if (peso <= 0) {
-            throw new IllegalArgumentException("El peso debe ser mayor que cero");
+            System.out.println("El peso debe ser mayor que cero");
+        } else {
+            this.peso = peso;
         }
-
-        this.peso = peso;
     }
 
     public String getZona() {
@@ -95,10 +95,10 @@ public abstract class Animal {
     public void setZona(String zona) {
 
         if (zona == null) {
-            throw new IllegalArgumentException("La zona no puede estar vacía");
+            System.out.println("La zona no puede estar vacía");
+        } else {
+            this.zona = zona;
         }
-
-        this.zona = zona;
     }
     
     
