@@ -27,22 +27,24 @@ public class Pez extends Animal {
     public void setTipoAgua(int tipoAgua) {
 
         if (tipoAgua < 0) {
-            throw new IllegalArgumentException("Tipo de agua inválido");
+            System.out.println("Tipo de agua inválido");
+        } else {
+            this.tipoAgua = tipoAgua;
         }
-
-        this.tipoAgua = tipoAgua;
     }
 
     public int getTamanoAcuario() {
         return tamanoAcuario;
     }
 
-    public void SetTamanoAcuario(int tamanoAcuario){
-        if(tamanoAcuario <= 0){
-            throw new IllegalArgumentException("El tamaño del acuario debe ser mayor que cero");
+    public void setTamanoAcuario(int tamanoAcuario) {
+
+        if (tamanoAcuario <= 0) {
+            System.out.println("El tamaño del acuario debe ser mayor que cero");
+        } else {
+            this.tamanoAcuario = tamanoAcuario;
         }
-        this.tamanoAcuario = tamanoAcuario;
-    }   
+    }
 
     @Override
     public double calcularCostoMantenimiento() {
