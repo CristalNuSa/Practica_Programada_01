@@ -27,10 +27,10 @@ public class Reptil extends Animal {
     public void setTipoHabitat(String tipoHabitat) {
 
         if (tipoHabitat == null) {
-           throw new IllegalArgumentException("El hábitat no puede estar vacío");
+            System.out.println("El tipo de hábitat no puede estar vacío");
+          } else {
+             this.tipoHabitat = tipoHabitat;
         }
-
-        this.tipoHabitat = tipoHabitat;
     }
 
     public int getTemperaturaRequerida() {
@@ -39,11 +39,11 @@ public class Reptil extends Animal {
 
     public void setTemperaturaRequerida(int temperaturaRequerida) {
 
-    if (temperaturaRequerida < 0) {
-        throw new IllegalArgumentException("La temperatura no puede ser negativa");
-    }
-
-    this.temperaturaRequerida = temperaturaRequerida;
+        if (temperaturaRequerida < 0) {
+            System.out.println("La temperatura requerida no puede ser negativa");
+         } else {
+            this.temperaturaRequerida = temperaturaRequerida;
+        }
     }
 
     @Override
