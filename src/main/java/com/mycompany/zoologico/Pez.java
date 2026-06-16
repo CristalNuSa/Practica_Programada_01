@@ -27,7 +27,7 @@ public class Pez extends Animal {
     public void setTipoAgua(int tipoAgua) {
 
         if (tipoAgua < 0) {
-        throw new IllegalArgumentException("Tipo de agua inválido");
+            throw new IllegalArgumentException("Tipo de agua inválido");
         }
 
         this.tipoAgua = tipoAgua;
