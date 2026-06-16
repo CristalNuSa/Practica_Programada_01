@@ -25,6 +25,11 @@ public class Ave extends Animal {
     }
 
     public void setTamanoAlas(int tamanoAlas) {
+
+        if (tamanoAlas <= 0) {
+            throw new IllegalArgumentException("El tamaño de alas debe ser mayor que cero");
+        }
+
         this.tamanoAlas = tamanoAlas;
     }
 
@@ -47,12 +52,4 @@ public class Ave extends Animal {
     public String descripcion(){        
         return super.descripcion() + " - Ave ( " +(puedeVolar ? " - Ave arborícola" : "- Ave terrestre") + tamanoAlas +"cm)";
     }
-    public void setTamanoAlas(int tamanoAlas) {
-
-        if (tamanoAlas <= 0) {
-            throw new IllegalArgumentException("El tamaño de alas debe ser mayor que cero");
-        }
-
-        this.tamanoAlas = tamanoAlas;
-    }   
 }
