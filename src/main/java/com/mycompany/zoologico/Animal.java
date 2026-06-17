@@ -18,14 +18,12 @@ public abstract class Animal {
     private String zona;
 
     public Animal(String identificador, String nombre, String especie, int edad, double peso, String zona) {
-
-    this.identificador = identificador;
-    this.nombre = nombre;
-    this.especie = especie;
-    this.edad = edad;
-    this.peso = peso;
-    this.zona = zona;
-
+        this.identificador = identificador;
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.peso = peso;
+        this.zona = zona;
     }
 
     public String getIdentificador() {
@@ -107,11 +105,13 @@ public abstract class Animal {
     
     public String descripcion(){
         // peso como es de tipo double puede dar error al imprimirlo por que la %d es para int
-        return String.format("%s %s %s %d %.2f %s", identificador, nombre, especie, edad, peso, zona);
+        return String.format("%s %s %s %d %d %s", identificador, nombre, especie, edad, peso, zona);
     }
     
     public final void imprimirDescripcion(){
         System.out.println("[Animal]: " + descripcion());
         
-    }         
+    }
+    
+    
 }

@@ -58,4 +58,5 @@ public class Reptil extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Reptil ( " + tipoHabitat + temperaturaRequerida + "°) "; 
     }  
+    
 }

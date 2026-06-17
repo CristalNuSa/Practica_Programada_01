@@ -56,4 +56,5 @@ public class Mamífero extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Mamífero ( " + tipoPelaje + cantAlimentoDiario + "kg) "; 
     }
+    
 }

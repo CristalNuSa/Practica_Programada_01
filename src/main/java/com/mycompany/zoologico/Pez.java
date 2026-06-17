@@ -58,5 +58,5 @@ public class Pez extends Animal {
     public String descripcion() {
         return super.descripcion() + " - Pez ( " + tipoAgua + tamanoAcuario + "m) "; 
     }
-       
+    
 }
