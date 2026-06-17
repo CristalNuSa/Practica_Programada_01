@@ -25,7 +25,12 @@ public class Reptil extends Animal {
     }
 
     public void setTipoHabitat(String tipoHabitat) {
-        this.tipoHabitat = tipoHabitat;
+
+        if (tipoHabitat == null) {
+            System.out.println("El tipo de hábitat no puede estar vacío");
+          } else {
+             this.tipoHabitat = tipoHabitat;
+        }
     }
 
     public int getTemperaturaRequerida() {
@@ -33,7 +38,12 @@ public class Reptil extends Animal {
     }
 
     public void setTemperaturaRequerida(int temperaturaRequerida) {
-        this.temperaturaRequerida = temperaturaRequerida;
+
+        if (temperaturaRequerida < 0) {
+            System.out.println("La temperatura requerida no puede ser negativa");
+         } else {
+            this.temperaturaRequerida = temperaturaRequerida;
+        }
     }
 
     @Override

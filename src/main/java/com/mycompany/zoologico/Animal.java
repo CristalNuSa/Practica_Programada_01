@@ -31,7 +31,12 @@ public abstract class Animal {
     }
 
     public void setIdentificador(String identificador) {
-        this.identificador = identificador;
+
+        if (identificador == null) {
+            System.out.println("El identificador del animal no puede estar vacío");
+        } else {
+            this.identificador = identificador;
+        }
     }
 
     public String getNombre() {
@@ -39,7 +44,12 @@ public abstract class Animal {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+
+        if (nombre == null) {
+            System.out.println("El nombre no puede estar vacío");
+        } else {
+            this.nombre = nombre;
+        }
     }
 
     public String getEspecie() {
@@ -55,7 +65,12 @@ public abstract class Animal {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+
+        if (edad < 0) {
+            System.out.println("La edad no puede ser negativa");
+        } else {
+            this.edad = edad;
+        }
     }
 
     public double getPeso() {
@@ -63,7 +78,12 @@ public abstract class Animal {
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
+
+        if (peso <= 0) {
+            System.out.println("El peso debe ser mayor que cero");
+        } else {
+            this.peso = peso;
+        }
     }
 
     public String getZona() {
@@ -71,7 +91,12 @@ public abstract class Animal {
     }
 
     public void setZona(String zona) {
-        this.zona = zona;
+
+        if (zona == null) {
+            System.out.println("La zona no puede estar vacía");
+        } else {
+            this.zona = zona;
+        }
     }
     
     

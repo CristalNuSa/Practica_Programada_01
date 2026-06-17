@@ -25,7 +25,12 @@ public class Ave extends Animal {
     }
 
     public void setTamanoAlas(int tamanoAlas) {
-        this.tamanoAlas = tamanoAlas;
+
+        if (tamanoAlas <= 0) {
+            System.out.println("El tamaño de las alas debe ser mayor que cero");
+        } else {
+            this.tamanoAlas = tamanoAlas;
+        }
     }
 
     public boolean isPuedeVolar() {

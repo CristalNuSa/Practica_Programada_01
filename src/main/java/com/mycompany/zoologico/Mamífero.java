@@ -24,7 +24,12 @@ public class Mamífero extends Animal {
     }
 
     public void setTipoPelaje(String tipoPelaje) {
-        this.tipoPelaje = tipoPelaje;
+
+        if (tipoPelaje == null) {
+            System.out.println("El tipo de pelaje no puede estar vacío");
+        } else {
+            this.tipoPelaje = tipoPelaje;
+        }
     }
 
     public int getCantAlimentoDiario() {
@@ -32,7 +37,12 @@ public class Mamífero extends Animal {
     }
 
     public void setCantAlimentoDiario(int cantAlimentoDiario) {
-        this.cantAlimentoDiario = cantAlimentoDiario;
+
+        if (cantAlimentoDiario < 0) {
+            System.out.println("La cantidad de alimento no puede ser negativa");
+        } else {
+            this.cantAlimentoDiario = cantAlimentoDiario;
+        }
     }
     
     @Override
