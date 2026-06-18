@@ -77,16 +77,18 @@ public abstract class Animal {
     
     
     public abstract double calcularCostoMantenimiento();
-    
-    public String descripcion(){
-        // peso como es de tipo double puede dar error al imprimirlo por que la %d es para int
-        return String.format("%s %s %s %d %d %s", identificador, nombre, especie, edad, peso, zona);
+
+    public String descripcion() {
+        return "Identificador: " + identificador
+                + ", Nombre: " + nombre
+                + ", Especie: " + especie
+                + ", Edad: " + edad
+                + ", Peso: " + peso
+                + ", Zona: " + zona;
     }
-    
-    public final void imprimirDescripcion(){
+
+    public final void imprimirDescripcion() {
         System.out.println("[Animal]: " + descripcion());
-        
     }
-    
-    
+
 }
